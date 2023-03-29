@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+.calculator {
+  border: 1px solid black;
+  padding: 10px;
+  width: fit-content;
+  font-size: 24px;
+}
+
+.calculator__input {
+  width: 100%;
+  text-align: right;
+  margin-bottom: 10px;
+  height: 36px;
+}
+
+.calculator-numbers {
+  display: grid;
+  grid-template-rows: 36px 36px 36px 36px;
+  grid-template-columns: 48px 48px 48px;
+  gap: 6px;
+}
+
+.calculator-numbers__item:last-child {
+  grid-column-start: 2;
+}
+
