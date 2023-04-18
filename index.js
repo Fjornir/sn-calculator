@@ -32,6 +32,8 @@ const equalsBtn = document.querySelector(".calculator-numbers__equals");
 const operationButtons = document.querySelectorAll(
   ".calculator-numbers__operation"
 );
+let operationsDisplay = document.querySelector(".operations")
+
 let operation = "";
 let isOperationComplete = false;
 let isSecondNeedToUpdate = false;
@@ -71,6 +73,8 @@ equalsBtn.addEventListener("click", function (event) {
       isSecondNeedToUpdate = false;
     }
     console.log(calc.firstValue + calc.secondValue);
+    console.log(operationsDisplay);
+    operationsDisplay.innerHTML = calc.firstValue + calc.secondValue;
     let res = eval(calc.firstValue + calc.secondValue);
 
     switch (operation) {
@@ -87,7 +91,6 @@ equalsBtn.addEventListener("click", function (event) {
         calc.setFirstValue(res + "/");
         break;
     }
-
     calc.calcNode.value = res;
     isOperationComplete = true;
     isNumbersNeedToReset = true;
