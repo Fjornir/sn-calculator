@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url(./public/imgs/background.gif);
+  background-repeat: no-repeat;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
 .calculator {
   display: flex;
   justify-content: center;
