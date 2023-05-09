@@ -81,7 +81,10 @@ function handleEquals() {
     isOperationComplete = true;
     isNumbersNeedToReset = true;
     isOperationBtnPressed = false;
-    input.focus();
+
+    if ($(".calculator").width() >= 430) {
+      input.focus();
+    }
   }
 }
 
